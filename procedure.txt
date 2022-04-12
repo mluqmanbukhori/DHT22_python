@@ -25,12 +25,12 @@ RPi.GPIO                   0.7.1
 setuptools                 40.8.0 
 sysv-ipc                   1.1.0  
 
-# jalankan `dht22.py`
-(oscar) pi@raspberrypi:~ $ python dht22.py 
+# jalankan `main.py`
+(oscar) pi@raspberrypi:~ $ python main.py 
 
 # jika error seperti ini
 Traceback (most recent call last):
-  File "dht22.py", line 8, in <module>
+  File "main.py", line 8, in <module>
     dhtDevice = adafruit_dht.DHT22(board.D4)
   File "/home/pi/oscar/lib/python3.7/site-packages/adafruit_dht.py", line 305, in __init__
     super().__init__(False, pin, 1000, use_pulseio)
@@ -47,8 +47,8 @@ PermissionError: [Errno 13] Permission denied: '/home/pi/oscar/lib/python3.7/sit
 # atur permission
 (oscar) pi@raspberrypi:~ $ sudo chmod 4775 /home/pi/oscar/lib/python3.7/site-packages/adafruit_blinka/microcontroller/bcm283x/pulseio/libgpiod_pulsein
 
-# jalankan `dht22.py` kembali
-(oscar) pi@raspberrypi:~ $ python dht22.py 
+# jalankan `main.py` kembali
+(oscar) pi@raspberrypi:~ $ python main.py 
 Temp: 84.4 F / 29.1 C    Humidity: 69.9% 
 Temp: 84.2 F / 29.0 C    Humidity: 71.3% 
 Temp: 84.2 F / 29.0 C    Humidity: 71.0% 
