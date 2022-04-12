@@ -1,13 +1,15 @@
 # Baca sensor DHT22 di Raspberry Pi 4 model B
 
 ## buat virtualenv
+> Ganti nama virtual yang diinginkan pada baris `nama-virtual`
 <pre>
-pi@raspberrypi:~ $ python3 -m venv `nama-virtual`
+pi@raspberrypi:~ $ python3 -m venv nama-virtual
 </pre>
 
 ## jalankan virtualenv yg telah dibuat
+> Ganti `nama-virtual` dengan nama virtual yang telah dibuat di atas
 <pre>
-pi@raspberrypi:~ $ source `nama-virtual`/bin/activate
+pi@raspberrypi:~ $ source nama-virtual/in/activate
 </pre>
   
 ## install library adafruit DHT
@@ -45,11 +47,11 @@ sysv-ipc                   1.1.0
   Traceback (most recent call last):
   File "main.py", line 8, in <module>
     dhtDevice = adafruit_dht.DHT22(board.D4)
-  File "/home/pi/oscar/lib/python3.7/site-packages/adafruit_dht.py", line 305, in __init__
+  File "/home/pi/nama-virtual/lib/python3.7/site-packages/adafruit_dht.py", line 305, in __init__
     super().__init__(False, pin, 1000, use_pulseio)
-  File "/home/pi/oscar/lib/python3.7/site-packages/adafruit_dht.py", line 86, in __init__
+  File "/home/pi/nama-virtual/lib/python3.7/site-packages/adafruit_dht.py", line 86, in __init__
     self.pulse_in = PulseIn(self._pin, maxlen=self._max_pulses, idle_state=True)
-  File "/home/pi/oscar/lib/python3.7/site-packages/adafruit_blinka/microcontroller/bcm283x/pulseio/PulseIn.py", line 77, in __init__
+  File "/home/pi/nama-virtual/lib/python3.7/site-packages/adafruit_blinka/microcontroller/bcm283x/pulseio/PulseIn.py", line 77, in __init__
     self._process = subprocess.Popen(cmd)  # pylint: disable=consider-using-with
   File "/usr/lib/python3.7/subprocess.py", line 775, in __init__
     restore_signals, start_new_session)
