@@ -1,25 +1,19 @@
 # Baca sensor DHT22 di Raspberry Pi 4 model B
 
 ## buat virtualenv
-> Ganti nama virtual yang diinginkan pada baris `nama-virtual`
-<pre>
-pi@raspberrypi:~ $ python3 -m venv nama-virtual
-</pre>
+> Ganti nama virtual yang diinginkan pada baris `nama-virtual` 
+<pre>pi@raspberrypi:~ $ python3 -m venv <kbd>nama-virtual<kbd></pre>
 
 ## jalankan virtualenv yg telah dibuat
 > Ganti `nama-virtual` dengan nama virtual yang telah dibuat di atas
-<pre>
-pi@raspberrypi:~ $ source nama-virtual/in/activate
-</pre>
-  
+
+<pre>pi@raspberrypi:~ $ source <kbd>nama-virtual</kbd>/in/activate</pre>
+
 ## install library adafruit DHT
-<pre>
-(nama-virtual) pi@raspberrypi:~ $ pip3 install adafruit-circuitpython-dht
-</pre>
+<pre>(nama-virtual) pi@raspberrypi:~ $ pip3 install adafruit-circuitpython-dht</pre>
 
 ## cek library Adafruit
-<pre>
-(nama-virtual) pi@raspberrypi:~ $ pip list
+<pre>(nama-virtual) pi@raspberrypi:~ $ pip list
 Package                    Version
 -------------------------- -------
 Adafruit-Blinka            7.2.0  
@@ -49,20 +43,20 @@ sysv-ipc                   1.1.0
     dhtDevice = adafruit_dht.DHT22(board.D4)
   File "/home/pi/nama-virtual/lib/python3.7/site-packages/adafruit_dht.py", line 305, in __init__
     super().__init__(False, pin, 1000, use_pulseio)
-  File "/home/pi/nama-virtual/lib/python3.7/site-packages/adafruit_dht.py", line 86, in __init__
+  File "/home/pi/<kbd>nama-virtual</kbd>/lib/python3.7/site-packages/adafruit_dht.py", line 86, in __init__
     self.pulse_in = PulseIn(self._pin, maxlen=self._max_pulses, idle_state=True)
-  File "/home/pi/nama-virtual/lib/python3.7/site-packages/adafruit_blinka/microcontroller/bcm283x/pulseio/PulseIn.py", line 77, in __init__
+  File "/home/pi/<kbd>nama-virtual</kbd>/lib/python3.7/site-packages/adafruit_blinka/microcontroller/bcm283x/pulseio/PulseIn.py", line 77, in __init__
     self._process = subprocess.Popen(cmd)  # pylint: disable=consider-using-with
   File "/usr/lib/python3.7/subprocess.py", line 775, in __init__
     restore_signals, start_new_session)
   File "/usr/lib/python3.7/subprocess.py", line 1522, in _execute_child
     raise child_exception_type(errno_num, err_msg, err_filename)
-PermissionError: [Errno 13] Permission denied: '/home/pi/oscar/lib/python3.7/site-packages/adafruit_blinka/microcontroller/bcm283x/pulseio/libgpiod_pulsein'
+PermissionError: [Errno 13] Permission denied: '/home/pi/<kbd>nama-virtual</kbd>/lib/python3.7/site-packages/adafruit_blinka/microcontroller/bcm283x/pulseio/libgpiod_pulsein'
 </pre>
 
 ## atur permission
 <pre>
-(nama-virtual) pi@raspberrypi:~ $ sudo chmod 4775 /home/pi/oscar/lib/python3.7/site-packages/adafruit_blinka/microcontroller/bcm283x/pulseio/libgpiod_pulsein
+(nama-virtual) pi@raspberrypi:~ $ sudo chmod 4775 /home/pi/<kbd>nama-virtual</kbd>/lib/python3.7/site-packages/adafruit_blinka/microcontroller/bcm283x/pulseio/libgpiod_pulsein
 </pre>
 
 ## jalankan `main.py` kembali
