@@ -2,22 +2,22 @@
 
 ## buat virtualenv
 <pre>
-pi@raspberrypi:~ $ python3 -m venv <nama-virtual>
+pi@raspberrypi:~ $ python3 -m venv `nama-virtual`
 </pre>
 
 ## jalankan virtualenv yg telah dibuat
 <pre>
-pi@raspberrypi:~ $ source <nama-virtual>/bin/activate
+pi@raspberrypi:~ $ source `nama-virtual`/bin/activate
 </pre>
   
 ## install library adafruit DHT
 <pre>
-(oscar) pi@raspberrypi:~ $ pip3 install adafruit-circuitpython-dht
+(nama-virtual) pi@raspberrypi:~ $ pip3 install adafruit-circuitpython-dht
 </pre>
 
 ## cek library Adafruit
 <pre>
-(oscar) pi@raspberrypi:~ $ pip list
+(nama-virtual) pi@raspberrypi:~ $ pip list
 Package                    Version
 -------------------------- -------
 Adafruit-Blinka            7.2.0  
@@ -37,7 +37,7 @@ sysv-ipc                   1.1.0
 
 ## jalankan `main.py`
 <pre>
-(oscar) pi@raspberrypi:~ $ python main.py 
+(nama-virtual) pi@raspberrypi:~ $ python main.py 
 </pre>
 
 ## jika error seperti ini
@@ -60,12 +60,12 @@ PermissionError: [Errno 13] Permission denied: '/home/pi/oscar/lib/python3.7/sit
 
 ## atur permission
 <pre>
-(oscar) pi@raspberrypi:~ $ sudo chmod 4775 /home/pi/oscar/lib/python3.7/site-packages/adafruit_blinka/microcontroller/bcm283x/pulseio/libgpiod_pulsein
+(nama-virtual) pi@raspberrypi:~ $ sudo chmod 4775 /home/pi/oscar/lib/python3.7/site-packages/adafruit_blinka/microcontroller/bcm283x/pulseio/libgpiod_pulsein
 </pre>
 
 ## jalankan `main.py` kembali
 <pre>
-(oscar) pi@raspberrypi:~ $ python main.py 
+(nama-virtual) pi@raspberrypi:~ $ python main.py 
 Temp: 84.4 F / 29.1 C    Humidity: 69.9% 
 Temp: 84.2 F / 29.0 C    Humidity: 71.3% 
 Temp: 84.2 F / 29.0 C    Humidity: 71.0% 
