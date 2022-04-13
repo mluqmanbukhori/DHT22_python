@@ -10,7 +10,7 @@
 <pre>pi@raspberrypi:~ $ source <kbd>nama-virtual</kbd>/in/activate</pre>
 
 ## install library adafruit DHT
-<pre>(nama-virtual) pi@raspberrypi:~ $ pip3 install adafruit-circuitpython-dht</pre>
+<pre>(nama-virtual) pi@raspberrypi:~ $ python -m pip install adafruit-circuitpython-dht</pre>
 
 ## cek library Adafruit
 <pre>(nama-virtual) pi@raspberrypi:~ $ pip list
