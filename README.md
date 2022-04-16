@@ -7,7 +7,7 @@
 ## jalankan virtualenv yg telah dibuat
 > Ganti `nama-virtual` dengan nama virtual yang telah dibuat di atas
 
-<pre>pi@raspberrypi:~ $ source <kbd>nama-virtual</kbd>/in/activate</pre>
+<pre>pi@raspberrypi:~ $ source <kbd>nama-virtual</kbd>/bin/activate</pre>
 
 ## install library adafruit DHT
 <pre>(nama-virtual) pi@raspberrypi:~ $ python -m pip install adafruit-circuitpython-dht</pre>
